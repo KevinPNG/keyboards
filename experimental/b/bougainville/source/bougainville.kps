@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package>
+  <System>
+    <KeymanDeveloperVersion>12.0.17.0</KeymanDeveloperVersion>
+    <FileVersion>7.0</FileVersion>
+  </System>
+  <Options>
+    <ExecuteProgram></ExecuteProgram>
+    <MSIFileName></MSIFileName>
+    <MSIOptions></MSIOptions>
+    <ReadMeFile>readme.htm</ReadMeFile>
+    <LicenseFile>..\LICENSE.md</LicenseFile>
+  </Options>
+  <StartMenu>
+    <Folder></Folder>
+    <Items/>
+  </StartMenu>
+  <Info>
+    <Version URL="">1.3</Version>
+    <Name URL="">Bougainville</Name>
+    <Copyright URL="">© 2019, SIL PNG</Copyright>
+    <Author URL="">SIL PNG</Author>
+    <Description URL="">A keyboard for Rapoisi, Halia, Tinputz, Terei, Sibe and Petats (Bougainville, Papua New Guinea), with extra characters for phonology work.</Description>
+  </Info>
+  <Files>
+    <File>
+      <Name>..\build\bougainville.kvk</Name>
+      <Description>File bougainville.kvk</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.kvk</FileType>
+    </File>
+    <File>
+      <Name>..\build\bougainville.kmx</Name>
+      <Description>Keyboard Bougainville</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.kmx</FileType>
+    </File>
+    <File>
+      <Name>..\build\bougainville.js</Name>
+      <Description>File bougainville.js</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.js</FileType>
+    </File>
+    <File>
+      <Name>welcome.htm</Name>
+      <Description>File welcome.htm</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.htm</FileType>
+    </File>
+    <File>
+      <Name>readme.htm</Name>
+      <Description>File readme.htm</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.htm</FileType>
+    </File>
+    <File>
+      <Name>..\LICENSE.md</Name>
+      <Description>File LICENSE.md</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.md</FileType>
+    </File>
+    <File>
+      <Name>..\..\..\..\release\shared\fonts\sil\gentium\Gentium-Regular.ttf</Name>
+      <Description>Font Gentium</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.ttf</FileType>
+    </File>
+    <File>
+      <Name>..\..\..\..\release\shared\fonts\sil\gentium\Gentium-Bold.ttf</Name>
+      <Description>Font Gentium Bold</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.ttf</FileType>
+    </File>
+    <File>
+      <Name>..\..\..\..\release\shared\fonts\sil\gentium\Gentium-Italic.ttf</Name>
+      <Description>Font Gentium Italic</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.ttf</FileType>
+    </File>
+    <File>
+      <Name>..\..\..\..\release\shared\fonts\sil\gentium\Gentium-BoldItalic.ttf</Name>
+      <Description>Font Gentium Bold Italic</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.ttf</FileType>
+    </File>
+    <File>
+      <Name>..\..\..\..\release\shared\fonts\sil\gentium\OFL.txt</Name>
+      <Description>File OFL.txt</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.txt</FileType>
+    </File>
+    <File>
+      <Name>..\..\..\..\release\shared\fonts\sil\gentium\OFL-FAQ.txt</Name>
+      <Description>File OFL-FAQ.txt</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.txt</FileType>
+    </File>
+    <File>
+      <Name>..\..\..\..\release\shared\fonts\sil\gentium\FONTLOG.txt</Name>
+      <Description>File FONTLOG.txt</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.txt</FileType>
+    </File>
+    <File>
+      <Name>..\..\..\..\release\shared\fonts\sil\gentium\Gentium_README.txt</Name>
+      <Description>File Gentium_README.txt</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.txt</FileType>
+    </File>
+  </Files>
+  <Keyboards>
+    <Keyboard>
+      <Name>Bougainville</Name>
+      <ID>bougainville</ID>
+      <OSKFont>..\..\..\..\release\shared\fonts\sil\gentium\Gentium-Regular.ttf</OSKFont>
+      <DisplayFont>..\..\..\..\release\shared\fonts\sil\gentium\Gentium-Regular.ttf</DisplayFont>
+      <Version>1.3</Version>
+      <Languages>
+        <Language ID="kyx">Rapoisi</Language>
+        <Language ID="hla">Halia</Language>
+        <Language ID="tpz">Tinputz</Language>
+        <Language ID="buo">Terei</Language>
+        <Language ID="nco">Sibe</Language>
+        <Language ID="pex">Petats</Language>
+        <Language ID="nas">Naasioi</Language>
+      </Languages>
+    </Keyboard>
+  </Keyboards>
+  <Strings/>
+</Package>
