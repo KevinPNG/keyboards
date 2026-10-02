@@ -1,7 +1,7 @@
 Bougainville keyboard
 =====================
 
-© 2019, SIL PNG
+© 2026, SIL PNG
 
 Version 1.3
 
