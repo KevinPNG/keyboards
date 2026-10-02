@@ -14,7 +14,7 @@ c store(&MnemonicLayout) '1'
 
 c *******************************************************************
 store(&MESSAGE) ';+x is trigger for most sequences.'
-store(&KMW_HELPTEXT) ';+x is trigger for most sequences. Vowels with macron are typed v+= . Double-macron vowels are typed e=e (E=E for all capitals). IPA phonetic characters use trigger q+x (x is trigger for ' U+0027 'u' U+0027 ' rota), with rotas for other related IPA forms. Curly quotes are RAlt+[ and RAlt+] (add Shift for double quotes), or typed in rota with the straight quotes ' U+0027 ' and ". Narrow no-break space is q+space.'
+store(&KMW_HELPTEXT) ';+x is trigger for most sequences. Vowels with macron are typed v+= . Double-macron vowels are typed e=e (E=E for all capitals). IPA phonetic characters use trigger q+x (x is trigger for ' U+0027 'u' U+0027 ' rota), with rotas for other related IPA forms. Curly quotes are RAlt+[ and RAlt+] (add Shift for double quotes), or q+< and q+> (q+<< and q+>> for double quotes), or typed in rota with the straight quotes ' U+0027 ' and ". Narrow no-break space is q+space.'
 begin Unicode > use(main)
 
 c ----------- DEADKEY TRIGGERS -----------
@@ -115,6 +115,15 @@ c   RAlt+[ ‘   RAlt+] ’   RAlt+Shift+[ “   RAlt+Shift+] ”   RAlt+- –  
 + [SHIFT RALT K_RBRKT]  > U+201D     c ” close double quote
 + [RALT K_HYPHEN]       > U+2013     c – en dash
 + [SHIFT RALT K_HYPHEN] > U+2014     c — em dash
+
+c q then < or > (nothing to delete, so these work in every app too):
+c   q< ‘   q<< “   q> ’   q>> ”
+c q< and q> wait for the next key: a second < or > gives the double quote,
+c anything else gives the single quote and then that key (see fallbacks below).
+dk(q) + '<'   > dk(qlt)
+dk(q) + '>'   > dk(qgt)
+dk(qlt) + '<' > U+201C     c “ open double quote
+dk(qgt) + '>' > U+201D     c ” close double quote
 
 c Older keying, kept for existing users. The second '<' or '>' replaces the first
 c quote, so it only works in apps that let a keyboard delete text.
@@ -224,5 +233,13 @@ c A trigger followed by any other character types both.
 any(trigdk) + any(plain) > index(trig, 1) index(plain, 2)
 c Backspace cancels a waiting trigger.
 any(trigdk) + [K_BKSP]   > nul
+
+c q< and q> not followed by a second < or >: type the single quote, then the key.
+dk(qlt) + any(trig)  > U+2018 index(trigdk, 2)
+dk(qlt) + any(plain) > U+2018 index(plain, 2)
+dk(qgt) + any(trig)  > U+2019 index(trigdk, 2)
+dk(qgt) + any(plain) > U+2019 index(plain, 2)
+dk(qlt) + [K_BKSP]   > nul
+dk(qgt) + [K_BKSP]   > nul
 
 c EOF

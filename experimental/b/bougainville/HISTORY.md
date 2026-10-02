@@ -13,6 +13,8 @@ Bougainville Change History
   RAlt+Shift+[ “, RAlt+Shift+] ”, RAlt+- – and RAlt+Shift+- —. The older sequences
   (`''`, `""`, `--`, RAlt+Shift+< then <) still work where the app allows
 * `q` then space gives a narrow no-break space (U+202F)
+* Curly quotes with `q`, which work in every app: `q<` ‘, `q<<` “, `q>` ’ and `q>>` ”.
+  The single quote appears when the next key is typed
 * `qsss` now gives sṣ (a plain s, then s with dot below) instead of ṣ alone
 * Touch: curly quotes ‘ ’ “ ” added to the long-press on `.`
 * Welcome page: explains the deadkeys, the new quote and dash keys, and which older
